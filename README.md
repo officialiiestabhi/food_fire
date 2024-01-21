@@ -68,3 +68,100 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Link
+link is indirectly using anchor tag
+it is a wrapper over anchor tag
+browser understand anchor tag
+link is not htm,js thing ,it is react thing
+anchor refreshes whole page
+ but link does not
+
+
+
+### Class
+older way of writing component
+
+what is functional component || class component (earlier) 
+it's a normal javascript function
+
+### Episode 09-optimising our app
+
+
+single responsibility principle-each componenet should have single responsobility
+or break it into different component 
+more reusable
+more maintainable
+more testable
+if you have several single unit it will easy to catch bug
+
+create custom hoook-so that fectching like thing can
+
+hooks are nothing but special helper functiom
+name of file should be same
+start with use //react understand it is as hook
+
+
+useEffect format
+
+useEffect(()=>{},[])
+
+
+chuncking or code splitting or dynamic bundling
+
+
+lazy loading or ondemand loading
+initial we do not load on demand w will load it
+
+lazy -callback func- import
+
+lazy(()=>import "different section")
+on click it will form a new js file different from main section
+we need  to wrap inside suspense otherwise error
+<suspense fallback={like shimmer or pience of jsx meanwhile code is loading}><diffcompo></suspense>
+eg:grocery section in flipkart
+to reduce bundle loading
+
+
+### episode 12
+react and redux are two different libraries
+redux is not mandatory
+it is used where alot of data is being transferred
+it is not mandatory
+no only redux is used to state manage
+it is primarily used for state management
+it is easier to debug
+it not only used with react
+it can also be used iwth other frameworks
+react-redux are poopular
+
+
+
+extra
+    //if you want something dynamic we have to use usestate
+    //it will re rander thwe w hole header componenet
+    //else in js if you use normal variable value will mus
+    t be updated but it will not reflect in ui as it needs one refresh to see it
+
+     //const onlineStatus=useOnlineStatus()
+    //if(onlineStatus===false)return <h1>it seems that you are offline</h1>
+    //you  need to return not to put in {}
+
+
+    //if dependecy array is empty then it will be called on initial render
+    //if dependecy arry is not there it will rendere every time
+
+    //useparam is udes to get id after url
+    //resid naming should be same as what yoh have entered in router
+    //console.log(resId);
+
+    // importing name itemcards will be same as api 
+    //as @ not allowed so we can alos write it like this it will read same
+
+    //problem in groupedCrAD Sometime it work sometime it not
+        //it is updating by company we havwe to chack where it shiftyed the datas\
+        //do not use brave
+        //console.log(json);
+
+        //sometimes extra content written in url you can trty to remove
