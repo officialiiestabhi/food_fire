@@ -165,3 +165,18 @@ extra
         //console.log(json);
 
         //sometimes extra content written in url you can trty to remove
+
+
+// if you want something data to use various place
+//use useContext inplace of passing props
+
+
+
+//add button -> dispatches an acction -> calls reducer func -> which modifies slice of redux store
+
+//store->selector ( subscribing to the store)->react component chsnge
+//selector is nothing but  ahook
+//it gives access to the store
+
+//func(dubwe) calling the func rightaway
+// ()=>func(dubwe) calling after callback func

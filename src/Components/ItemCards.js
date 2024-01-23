@@ -1,8 +1,13 @@
+import { useDispatch } from "react-redux";
 import { FOOD_URL } from "../Utils/Constants";
-
+import { addItem } from "../Utils/cartSlice";
 
 const ItemCards = ({menus}) => {
     console.log(menus);
+    const dispatch=useDispatch();
+    const handleAdditem=(menu)=>{
+      dispatch(addItem(menu))
+    }
   return (
     <div>
       {
@@ -15,16 +20,28 @@ const ItemCards = ({menus}) => {
             </div>
             <div className="w-3/12">
             <div className="absolute mx-[50px] my-[100px]">
-            <button className="bg-black text-white px-2 py-1 rounded-lg m">
+            <button className="bg-black text-white px-2 py-1 rounded-lg m"
+            onClick={()=>handleAdditem(menu)}>
                 ADD +
             </button>
             </div>
+
             
-            <img
-            className=" rounded-lg"
+            <div >
+            {
+              menu?.card?.info?.imageId ?
+              <img
+            className=" rounded-lg w-[180px] h-[110px] "
                 src={FOOD_URL+menu?.card?.info?.imageId }
                 alt="menulogo"
+            /> :<img
+            className=" rounded-lg w-[180px] h-[110px] "
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/2048px-No_image_available.svg.png"
+              alt="noimage"
             />
+            }
+            </div>
+            
             </div>
             </div>
         ))

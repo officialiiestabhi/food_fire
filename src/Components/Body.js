@@ -1,3 +1,4 @@
+import { DISH_URL } from "../Utils/Constants";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 
@@ -12,7 +13,7 @@ const Body=()=>{
     },[])
 
     const fetchData=async ()=>{
-      const fdata=await fetch("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
+      const fdata=await fetch(DISH_URL);
       const json=await fdata.json();
 
       setResObj(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle.restaurants);

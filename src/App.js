@@ -7,6 +7,9 @@ import About from "./Components/About";
 import Error from "./Components/Error";
 import Contact from "./Components/Contact";
 import RestaurantMenu from "./Components/RestaurantMenu";
+import { Provider } from "react-redux";
+import appStore from "./Utils/appStore";
+import Cart from "./Components/Cart";
 /**
  * header
  * -logo
@@ -47,6 +50,10 @@ export const AppRouter=createBrowserRouter([
         path:"/restaurants/:resId",
         //:resid indicates dynamic changig od url according to rstaurants
         element:<RestaurantMenu/>
+      },
+      {
+        path:"/cart",
+        element:<Cart/>
       }
     ],
     errorElement:<Error/>
@@ -57,10 +64,12 @@ export const AppRouter=createBrowserRouter([
 function App(){
 
   return(
-    <div className="p-2 ">
+    <Provider store={appStore}>
+    <div>
       <Header/>
       <Outlet/>
     </div>
+    </Provider>
   )
 }
 export default App;
