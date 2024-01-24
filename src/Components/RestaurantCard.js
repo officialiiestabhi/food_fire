@@ -5,7 +5,7 @@ const RestaurantCard=(props)=>{
     //it's better to destructure to look clean code
     const{name,cloudinaryImageId,avgRating,deliveryTime,cuisines}=resdata.info;
     return(
-      <div className=" ml-6 w-80 h-80 space-x-2 p-2">
+      <div className="ml-6 w-80 h-80 space-x-2 shadow-md rounded-lg mt-4 space-y-3">
       <img 
       className="h-40 w-full rounded-md"
       //for concatenation bracket required(""+"")
@@ -25,23 +25,12 @@ const RestaurantCard=(props)=>{
   
         <h3 >{deliveryTime}mins</h3>
       </div>
-      <h3>{cuisines.join(",")}</h3>
+      <h3>{cuisines.join(", ")}</h3>
        </div>
     )
   }
 
   export default RestaurantCard;
 
-  //higher order funcction
-//in put restaurant card =>restaurantcardpromoted
-  export const withPromotedlabel=(RestaurantCard)=>{
-    return ()=>{
-      return(
-        <div>
-          <h1 className="font-semibold">Promoted</h1>
-          <RestaurantCard/>
-        </div>
-      )
-    }
-  }
+
 

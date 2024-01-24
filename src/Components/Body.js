@@ -57,12 +57,10 @@ const Body=()=>{
         </div>
         
 
-        <div className="flex flex-wrap space-x-4">
+        <div className="flex flex-wrap ">
         {
-          //we will write jsx code inside bracket only
           ResObj && ResObj.map(
             (restaur=>
-            //<h1>Promoted </h1>
             <Link
             key={restaur.info.id} 
             to={"/restaurants/"+restaur.info.id}>

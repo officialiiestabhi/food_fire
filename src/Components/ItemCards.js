@@ -20,7 +20,7 @@ const ItemCards = ({menus}) => {
             </div>
             <div className="w-3/12">
             <div className="absolute mx-[50px] my-[100px]">
-            <button className="bg-black text-white px-2 py-1 rounded-lg m"
+            <button className="bg-black text-white px-2 py-1 rounded-lg hover hover:bg-slate-800"
             onClick={()=>handleAdditem(menu)}>
                 ADD +
             </button>

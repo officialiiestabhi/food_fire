@@ -180,3 +180,17 @@ extra
 
 //func(dubwe) calling the func rightaway
 // ()=>func(dubwe) calling after callback func
+
+
+  //higher order funcction
+//in put restaurant card =>restaurantcardpromoted
+  export const withPromotedlabel=(RestaurantCard)=>{
+    return ()=>{
+      return(
+        <div>
+          <h1 className="font-semibold">Promoted</h1>
+          <RestaurantCard/>
+        </div>
+      )
+    }
+  }

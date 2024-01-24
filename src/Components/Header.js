@@ -12,22 +12,22 @@ const Header=()=>{
 
     return(
       <div className="flex justify-between bg-orange-100 shadow-md ">
-        <div>
-        <img className="w-40"  src={LOGO_URL} alt="logo"/>
+        <div className="w-1/12 ml-10">
+        <Link to="/">
+        <img   src={LOGO_URL} alt="logo"/>
+        </Link>
          </div>
-         <div className="flex items-center mr-5">
-          <ul className="flex space-x-4 my-10 text-2xl">
+         <div className="flex items-center  justify-end mr-4 w-5/12">
+          <ul className="flex space-x-12 my-10 text-2xl">
           <li className="font-semibold">
             {
               onlinHai?"Online 🟢":"Offline 🔴"
             }
           </li>
+          
           <li >
-            <Link to="/">Homeggggi</Link>
+            <Link to="/">Home</Link>
             </li>
-          <li>
-            <Link to="/about">About us</Link>
-             </li>
           <li>
             <Link to="/contact">Contact us</Link>
           </li>
@@ -44,7 +44,7 @@ const Header=()=>{
           </div>
 
           <button
-          className="bg-orange-600 px-5 py-1 rounded-md"
+          className="bg-orange-600 px-5 py-1 rounded-md "
            onClick={()=>{
             if(reg==="Login")setreg("LogOut");
             else setreg("Login");

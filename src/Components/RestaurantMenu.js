@@ -27,8 +27,8 @@ const RestaurantMenu=()=>{
     
     
     return (
-        <div className="p-2 mt-4 ml-2 ">
-        <div className="w-6/12 ml-[110px] flex justify-center">
+        <div className="p-2 mt-4 mx-auto w-6/12">
+        <div className="flex ">
             <div >
             <h1 className="font-semibold text-2xl">{name}</h1>
             <h1 className="font-normal text-slate-500 ">{city}</h1>
