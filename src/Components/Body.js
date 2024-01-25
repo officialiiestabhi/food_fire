@@ -24,8 +24,8 @@ const Body=()=>{
     return(
       <div className="mainbody p-3">
 
-        <div className="filterthings flex space-x-8 p-3">
-        <div className="searchbar flex m-2">
+        <div className="filterthings flex space-x-8 p-3 flex-wrap">
+        <div className="searchbar flex m-2 ">
         <input 
         className="border-1 bg-gray-300 rounded-l-md"
         type="text"
