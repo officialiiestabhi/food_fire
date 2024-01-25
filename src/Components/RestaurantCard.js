@@ -2,10 +2,10 @@ import { FOOD_URL } from "../Utils/Constants";
 
 const RestaurantCard=(props)=>{
     const {resdata}=props;
-    //it's better to destructure to look clean code
+    //it's better to destructure to look clean codenpm e
     const{name,cloudinaryImageId,avgRating,deliveryTime,cuisines}=resdata.info;
     return(
-      <div className="ml-6 lg:w-80 h-80 w-60  space-x-2 shadow-md rounded-lg mt-4 space-y-3">
+      <div className="ml-6 lg:w-80 lg:h-80 w-60  space-x-2 shadow-md rounded-lg mt-4 space-y-3">
       <img 
       className="h-40 w-full rounded-md"
       //for concatenation bracket required(""+"")

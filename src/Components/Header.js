@@ -17,8 +17,8 @@ const Header=()=>{
         <img   src={LOGO_URL} alt="logo"/>
         </Link>
          </div>
-         <div className="flex items-center  justify-end mr-4 w-5/12">
-          <ul className="flex lg:space-x-12 space-x-3 my-10 lg:text-2xl ">
+         <div className="flex items-center  justify-end mr-4 w-6/12">
+          <ul className="flex lg:space-x-12 space-x-3 my-10 md:text-2xl text-sm">
           <li className="font-semibold">
             {
               onlinHai?"Online 🟢":"Offline 🔴"
@@ -31,9 +31,9 @@ const Header=()=>{
           <li>
             <Link to="/contact">Contact us</Link>
           </li>
-          <div className="flex flex-wrap">
+          <div className="flex ">
           <Link to="/cart"><img
-          className="lg:w-8 "
+          className="w-8 "
           src="https://cdn-icons-png.flaticon.com/512/3649/3649552.png"
           alt="cartlogo"/></Link>
           {
@@ -44,7 +44,7 @@ const Header=()=>{
           </div>
 
           <button
-          className="bg-orange-600 lg:px-5 px-2 lg:py-1 rounded-md "
+          className="bg-orange-600  lg:py-1 rounded-md w-[70px] lg:w-[100px] h-10 lg:text-lg text-sm"
            onClick={()=>{
             if(reg==="Login")setreg("LogOut");
             else setreg("Login");
