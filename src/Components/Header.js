@@ -3,6 +3,8 @@ import { LOGO_URL } from "../Utils/Constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus"
 import { useSelector } from "react-redux";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 //{} is used in importing when in that component variours export is calling
 const Header=()=>{
   const onlinHai=useOnlineStatus();
@@ -26,7 +28,7 @@ const Header=()=>{
           </li>
           
           <li >
-            <Link to="/">Home</Link>
+            <a href="/">Home</a>
             </li>
           <li>
             <Link to="/contact">Contact us</Link>
@@ -38,17 +40,33 @@ const Header=()=>{
           alt="cartlogo"/></Link>
           {
             store.length>0 &&
-          <sup className="text-green-500 font-semibold">{store.length}</sup>
+            <div className="bg-green-500 md:h-5 md:w-5 h-3 w-3 rounded-2xl ">
+            <sup className="text-white font-semibold lg:mx-1">{store.length}</sup>
+            </div>
+
           }
           
           </div>
 
           <button
-          className="bg-orange-600  lg:py-1 rounded-md w-[70px] lg:w-[100px] h-10 lg:text-lg text-sm"
+          className="bg-orange-600  lg:py-1 rounded-md w-[70px] lg:w-[100px] h-10 lg:text-lg text-sm text-white font-bold"
            onClick={()=>{
-            if(reg==="Login")setreg("LogOut");
-            else setreg("Login");
+            if(reg==="Login"){
+              setreg("LogOut");
+              toast("logOut successfully")
+            }
+              
+            else {
+              setreg("Login");
+              toast("login successfully")
+            }
+
+            
           }}>{reg}</button>
+          <ToastContainer
+            position="top-center"
+            autoClose={200}
+          />
           </ul>
          </div>
       </div>

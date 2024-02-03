@@ -3,7 +3,7 @@ import ItemCards from "./ItemCards";
 
 
 const RestaurantCategory = ({data,showItem,setShowIndex}) => {
-  console.log(data);
+  //console.log(data);
   const clickHandler=()=>{
     setShowIndex();
 }

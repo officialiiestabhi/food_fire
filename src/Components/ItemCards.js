@@ -1,13 +1,18 @@
 import { useDispatch } from "react-redux";
 import { FOOD_URL } from "../Utils/Constants";
 import { addItem } from "../Utils/cartSlice";
+//import { ToastContainer, toast } from 'react-toastify';
+//import 'react-toastify/dist/ReactToastify.css';
 
 const ItemCards = ({menus}) => {
-    console.log(menus);
+    //console.log(menus);
     const dispatch=useDispatch();
+
     const handleAdditem=(menu)=>{
+      //toast("Successfully added");
       dispatch(addItem(menu))
     }
+     
   return (
     <div>
       {
@@ -21,9 +26,17 @@ const ItemCards = ({menus}) => {
             <div className="w-3/12">
             <div className="absolute lg:mx-[50px] my-[100px]">
             <button className="bg-black text-white lg:px-2 lg:py-1 rounded-lg hover hover:bg-slate-800"
-            onClick={()=>handleAdditem(menu)}>
-                ADD
+            onClick={()=>handleAdditem(menu)}
+            >
+                ADD 
             </button>
+
+            {/* <ToastContainer
+              position="top-center"//some problem here
+              autoClose={200}
+            /> 
+            i ahve to chck it out
+            and fix reemove error*/}
             </div>
 
             

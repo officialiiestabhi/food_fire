@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Contact=()=>{
     return(
-        <div>
+        <div className="items-center">
             <h1 className="text-xl"> Abhishek kumar rai</h1>
             <Link to="https://github.com/officialiiestabhi">
             <img
